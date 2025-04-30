@@ -13,14 +13,14 @@ export default class LoginPage{
          await this.page.goto("/")
     }
 
-    async fillUserName(){
-
-        await this.page.fill(this.usernameinputselector,"username");
+    async fillUserName(username:string ){
+        
+        await this.page.locator(this.usernameinputselector).fill(username);
         
     }
-    async fillPassword(){
+    async fillPassword(password:string){
 
-        await this.page.fill(this.passwordinputselector,"Password");
+        await this.page.locator(this.passwordinputselector).fill(password);
         
     }
 
